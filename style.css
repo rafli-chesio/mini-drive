@@ -1,0 +1,401 @@
+/* --- Global & Light Theme --- */
+:root {
+  --background-color: #f0f2f5;
+  --surface-color: #ffffff;
+  --primary-text-color: #202124;
+  --secondary-text-color: #5f6368;
+  --border-color: #dadce0;
+  --primary-accent: #1a73e8;
+  --primary-accent-hover: #1b66c9;
+  --danger-color: #d93025;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  overflow: hidden; /* Mencegah scroll di body utama */
+}
+
+/* --- Layout Aplikasi Utama --- */
+.app-container { display: flex; flex-direction: column; height: 100vh; }
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--surface-color);
+}
+.app-header h1 { font-size: 1.5rem; }
+.header-actions { margin-left: 60px; display: flex; gap: 12px; }
+.user-menu { margin-left: auto; display: flex; align-items: center; gap: 15px; }
+
+.app-main { padding: 24px; overflow-y: auto; flex-grow: 1; }
+
+/* --- Info Penyimpanan --- */
+.storage-info { margin-bottom: 24px; }
+.storage-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin: 8px 0;
+}
+.storage-bar-fill {
+  height: 100%;
+  width: 0%; /* Diatur oleh JS */
+  background-color: var(--primary-accent);
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+#storage-usage-text { font-size: 0.9rem; color: var(--secondary-text-color); }
+
+/* --- Tabel File --- */
+.file-browser { background-color: var(--surface-color); border: 1px solid var(--border-color); border-radius: 8px; overflow: hidden; }
+.table-container { width: 100%; overflow-x: auto; /* Agar bisa scroll horizontal di mobile */ }
+table { width: 100%; border-collapse: collapse; }
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+thead th {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  background-color: var(--background-color);
+}
+tbody tr:hover { background-color: #f5f5f5; }
+.file-name-cell { display: flex; align-items: center; gap: 16px; }
+.file-icon { font-size: 1.2rem; width: 20px; text-align: center; }
+
+/* --- Tombol & Aksi --- */
+button {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 8px 16px;
+  background-color: var(--surface-color);
+  color: var(--primary-text-color);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+button:hover { background-color: #f8f9fa; box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3); }
+#upload-file-btn { background-color: var(--primary-accent); color: #fff; border-color: var(--primary-accent); }
+#upload-file-btn:hover { background-color: var(--primary-accent-hover); }
+
+.action-buttons button { border: none; background: none; box-shadow: none; color: var(--secondary-text-color); padding: 8px; }
+.action-buttons button:hover { color: var(--primary-text-color); background-color: #e0e0e0; }
+.delete-btn:hover { color: var(--danger-color) !important; }
+
+/* --- Tambahan untuk Spinner & Modal --- */
+
+/* Spinner Overlay */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex; /* Menggunakan flex untuk menengahkan */
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2000;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid var(--accent-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: var(--surface-color);
+  padding: 25px 35px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.modal-content h3 {
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.modal-content p strong {
+  color: var(--text-primary);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: var(--text-primary);
+}
+
+/* Membuat file card bisa di-klik */
+.file-card {
+  cursor: pointer;
+}
+
+.container .subtitle {
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+.container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.container button.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--primary-text-color);
+}
+.container button.btn-secondary:hover {
+  background-color: var(--surface-hover);
+}
+
+.login-container {
+  max-width: 500px; /* Batasi lebar form di desktop */
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.login-container form {
+  display: block;
+  width: 100%;
+  background-color: #FFF;
+  margin: 0;
+  padding: 2.25em;
+  box-sizing: border-box;
+  border: solid 1px #DDD;
+  border-radius: 0.5em;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.login-container .svgContainer {
+  position: relative;
+  width: 200px; /* Dikecilkan agar lebih proporsional */
+  height: 200px;
+  margin: 0 auto 1em;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.login-container .svgContainer div {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  padding-bottom: 100%;
+}
+
+.login-container .svgContainer .mySVG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.login-container .svgContainer:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: inherit;
+  height: inherit;
+  box-sizing: border-box;
+  border: solid 2.5px #ce182a;
+  border-radius: 50%;
+}
+
+.login-container .inputGroup {
+  margin: 0 0 2em;
+  padding: 0;
+  position: relative;
+}
+
+.login-container .inputGroup:last-of-type {
+  margin-bottom: 0;
+}
+
+.login-container label {
+  margin: 0 0 12px;
+  display: block;
+  font-size: 0.8em; /* Disesuaikan */
+  color: #ce182a;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.login-container input[type=email],
+.login-container input[type=password] {
+  display: block;
+  margin: 0;
+  padding: 0.8em 1em;
+  background-color: #fdf5f3;
+  border: solid 2px #ce182a;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto; /* Dibuat otomatis */
+  font-size: 1em; /* Disesuaikan */
+  color: #353538;
+  font-weight: 600;
+  font-family: inherit;
+  transition: box-shadow 0.2s linear, border-color 0.25s ease-out;
+}
+
+.login-container input[type=email]:focus,
+.login-container input[type=password]:focus {
+  outline: none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border: solid 2px #ce182a;
+}
+
+.login-container button {
+  padding: 0.8em 1em;
+  background-color: #ce182a;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em; /* Disesuaikan */
+  color: #FFF;
+  font-weight: 600;
+  font-family: inherit;
+  transition: background-color 0.2s ease-out;
+  margin-top: 10px; /* Beri jarak antar tombol */
+}
+
+.login-container button:hover {
+  background-color: #a8101e;
+}
+
+.login-container button.btn-secondary {
+  background-color: #fff;
+  color: #ce182a;
+  border: 1px solid #ce182a;
+}
+
+.login-container button.btn-secondary:hover {
+  background-color: #fdf5f3;
+}
+
+.login-container #message {
+  margin-top: 1em;
+  color: var(--danger-color);
+  font-size: 0.8em;
+  text-align: center;
+}
+
+/* Sisa gaya untuk animasi (show password, dll.) */
+.login-container .inputGroup2 #showPasswordToggle {
+    display: block;
+    padding: 0 0 0 1.45em;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 0.8em;
+    color: #5f6368;
+}
+.login-container .inputGroup2 #showPasswordToggle input {
+    position: absolute;
+    opacity: 0;
+}
+.login-container .inputGroup2 #showPasswordToggle .indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 0.85em;
+    width: 0.85em;
+    background-color: #fdf5f3;
+    border: solid 2px #ce182a;
+    border-radius: 3px;
+}
+.login-container .inputGroup2 #showPasswordToggle .indicator:after {
+    content: "";
+    position: absolute;
+    left: 0.25em;
+    top: 0.025em;
+    width: 0.2em;
+    height: 0.5em;
+    border: solid #ce182a;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    visibility: hidden;
+}
+.login-container .inputGroup2 #showPasswordToggle input:checked ~ .indicator:after {
+    visibility: visible;
+}
+
+/* Penyesuaian Body khusus halaman login */
+body:not(.light-theme) {
+  background-color: #fdf5f3;
+  overflow-y: auto; /* Izinkan scroll jika perlu */
+  font-size: 16px; /* Reset font size dasar */
+}
+
+.login-container .bottom-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: var(--secondary-text-color);
+}
+.login-container .bottom-link a {
+  color: #ce182a;
+  text-decoration: none;
+  font-weight: 600;
+}
+.login-container .bottom-link a:hover {
+  text-decoration: underline;
+}

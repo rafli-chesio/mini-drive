@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id" >
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Drive - Register</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="login-container">
+  <form onsubmit="return false;">
+    <div class="svgContainer">
+      <div> 
+        <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 200">
+          <defs>
+            <circle id="armMaskPath" cx="100" cy="100" r="100"/>	
+          </defs>
+          <clipPath id="armMask">
+            <use xlink:href="#armMaskPath" overflow="visible"/>
+          </clipPath>
+          <circle cx="100" cy="100" r="100" fill="#f9c8bc"/>
+          <g class="body">
+            <path class="bodyBGchanged" style="display: none;" fill="#FFFFFF" d="M200,122h-35h-14.9V72c0-27.6-22.4-50-50-50s-50,22.4-50,50v50H35.8H0l0,91h200L200,122z"/>
+            <path class="bodyBGnormal" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoinn="round" fill="#FFFFFF" d="M200,158.5c0-20.2-14.8-36.5-35-36.5h-14.9V72.8c0-27.4-21.7-50.4-49.1-50.8c-28-0.5-50.9,22.1-50.9,50v50 H35.8C16,122,0,138,0,157.8L0,213h200L200,158.5z"/>
+            <path fill="#fae8e3" d="M100,156.4c-22.9,0-43,11.1-54.1,27.7c15.6,10,34.2,15.9,54.1,15.9s38.5-5.8,54.1-15.9 C143,167.5,122.9,156.4,100,156.4z"/>
+          </g>
+          <g class="earL"><g class="outerEar" fill="#fae8e3" stroke="#3a5e77" stroke-width="2.5"><circle cx="47" cy="83" r="11.5"/><path d="M46.3 78.9c-2.3 0-4.1 1.9-4.1 4.1 0 2.3 1.9 4.1 4.1 4.1" stroke-linecap="round" stroke-linejoin="round"/></g><g class="earHair"><rect x="51" y="64" fill="#FFFFFF" width="15" height="35"/><path d="M53.4 62.8C48.5 67.4 45 72.2 42.8 77c3.4-.1 6.8-.1 10.1.1-4 3.7-6.8 7.6-8.2 11.6 2.1 0 4.2 0 6.3.2-2.6 4.1-3.8 8.3-3.7 12.5 1.2-.7 3.4-1.4 5.2-1.9" fill="#fff" stroke="#3a5e77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g></g>
+          <g class="earR"><g class="outerEar"><circle fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" cx="153" cy="83" r="11.5"/><path fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M153.7,78.9 c2.3,0,4.1,1.9,4.1,4.1c0,2.3-1.9,4.1-4.1,4.1"/></g><g class="earHair"><rect x="134" y="64" fill="#FFFFFF" width="15" height="35"/><path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M146.6,62.8 c4.9,4.6,8.4,9.4,10.6,14.2c-3.4-0.1-6.8-0.1-10.1,0.1c4,3.7,6.8,7.6,8.2,11.6c-2.1,0-4.2,0-6.3,0.2c2.6,4.1,3.8,8.3,3.7,12.5 c-1.2-0.7-3.4-1.4-5.2-1.9"/></g></g>
+          <path class="chin" d="M84.1 121.6c2.7 2.9 6.1 5.4 9.8 7.5l.9-4.5c2.9 2.5 6.3 4.8 10.2 6.5 0-1.9-.1-3.9-.2-5.8 3 1.2 6.2 2 9.7 2.5-.3-2.1-.7-4.1-1.2-6.1" fill="none" stroke="#3a5e77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="face" fill="#fae8e3" d="M134.5,46v35.5c0,21.815-15.446,39.5-34.5,39.5s-34.5-17.685-34.5-39.5V46"/>
+          <path class="hair" fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M81.457,27.929 c1.755-4.084,5.51-8.262,11.253-11.77c0.979,2.565,1.883,5.14,2.712,7.723c3.162-4.265,8.626-8.27,16.272-11.235 c-0.737,3.293-1.588,6.573-2.554,9.837c4.857-2.116,11.049-3.64,18.428-4.156c-2.403,3.23-5.021,6.391-7.852,9.474"/>
+          <g class="eyebrow"><path fill="#FFFFFF" d="M138.142,55.064c-4.93,1.259-9.874,2.118-14.787,2.599c-0.336,3.341-0.776,6.689-1.322,10.037 c-4.569-1.465-8.909-3.222-12.996-5.226c-0.98,3.075-2.07,6.137-3.267,9.179c-5.514-3.067-10.559-6.545-15.097-10.329 c-1.806,2.889-3.745,5.73-5.816,8.515c-7.916-4.124-15.053-9.114-21.296-14.738l1.107-11.768h73.475V55.064z"/><path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M63.56,55.102 c6.243,5.624,13.38,10.614,21.296,14.738c2.071-2.785,4.01-5.626,5.816-8.515c4.537,3.785,9.583,7.263,15.097,10.329 c1.197-3.043,2.287-6.104,3.267-9.179c4.087,2.004,8.427,3.761,12.996,5.226c0.545-3.348,0.986-6.696,1.322-10.037 c4.913-0.481,9.857-1.34,14.787-2.599"/></g>
+          <g class="eyeL"><circle cx="85.5" cy="78.5" r="3.5" fill="#3a5e77"/><circle cx="84" cy="76" r="1" fill="#fff"/></g>
+          <g class="eyeR"><circle cx="114.5" cy="78.5" r="3.5" fill="#3a5e77"/><circle cx="113" cy="76" r="1" fill="#fff"/></g>
+          <g class="mouth"><path class="mouthBG" fill="#617E92" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/><path style="display: none;" class="mouthSmallBG" fill="#617E92" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/><path style="display: none;" class="mouthMediumBG" d="M95,104.2c-4.5,0-8.2-3.7-8.2-8.2v-2c0-1.2,1-2.2,2.2-2.2h22c1.2,0,2.2,1,2.2,2.2v2 c0,4.5-3.7,8.2-8.2,8.2H95z"/><path style="display: none;" class="mouthLargeBG" d="M100 110.2c-9 0-16.2-7.3-16.2-16.2 0-2.3 1.9-4.2 4.2-4.2h24c2.3 0 4.2 1.9 4.2 4.2 0 9-7.2 16.2-16.2 16.2z" fill="#617e92" stroke="#3a5e77" stroke-linejoin="round" stroke-width="2.5"/><defs><path id="mouthMaskPath" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/></defs><clipPath id="mouthMask"><use xlink:href="#mouthMaskPath" overflow="visible"/></clipPath><g clip-path="url(#mouthMask)"><g class="tongue"><circle cx="100" cy="107" r="8" fill="#cc4a6c"/><ellipse class="tongueHighlight" cx="100" cy="100.5" rx="3" ry="1.5" opacity=".1" fill="#fff"/></g></g><path clip-path="url(#mouthMask)" class="tooth" style="fill:#FFFFFF;" d="M106,97h-4c-1.1,0-2-0.9-2-2v-2h8v2C108,96.1,107.1,97,106,97z"/><path class="mouthOutline" fill="none" stroke="#3A5E77" stroke-width="2.5" stroke-linejoin="round" d="M100.2,101c-0.4,0-1.4,0-1.8,0c-2.7-0.3-5.3-1.1-8-2.5c-0.7-0.3-0.9-1.2-0.6-1.8 c0.2-0.5,0.7-0.7,1.2-0.7c0.2,0,0.5,0.1,0.6,0.2c3,1.5,5.8,2.3,8.6,2.3s5.7-0.7,8.6-2.3c0.2-0.1,0.4-0.2,0.6-0.2 c0.5,0,1,0.3,1.2,0.7c0.4,0.7,0.1,1.5-0.6,1.9c-2.6,1.4-5.3,2.2-7.9,2.5C101.7,101,100.5,101,100.2,101z"/></g>
+          <path class="nose" d="M97.7 79.9h4.7c1.9 0 3 2.2 1.9 3.7l-2.3 3.3c-.9 1.3-2.9 1.3-3.8 0l-2.3-3.3c-1.3-1.6-.2-3.7 1.8-3.7z" fill="#3a5e77"/>
+          <g class="arms" clip-path="url(#armMask)"><g class="armL" style="visibility: hidden;"><polygon fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="121.3,98.4 111,59.7 149.8,49.3 169.8,85.4"/><path fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M134.4,53.5l19.3-5.2c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-10.3,2.8"/><path fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M150.9,59.4l26-7c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-21.3,5.7"/><g class="twoFingers"><path fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M158.3,67.8l23.1-6.2c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-23.1,6.2"/><path fill="#f9c8bc" d="M180.1,65l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L180.1,65z"/><path fill="#fae8e3" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M160.8,77.5l19.4-5.2c2.7-0.7,5.4,0.9,6.1,3.5v0c0.7,2.7-0.9,5.4-3.5,6.1l-18.3,4.9"/><path fill="#f9c8bc" d="M178.8,75.7l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L178.8,75.7z"/></g><path fill="#f9c8bc" d="M175.5,55.9l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L175.5,55.9z"/><path fill="#f9c8bc" d="M152.1,50.4l2.2-0.6c1.1-0.3,2.2,0.3,2.4,1.4v0c0.3,1.1-0.3,2.2-1.4,2.4l-2.2,0.6L152.1,50.4z"/><path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M123.5,97.8 c-41.4,14.9-84.1,30.7-108.2,35.5L1.2,81c33.5-9.9,71.9-16.5,111.9-21.8"/><path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M108.5,60.4 c7.7-5.3,14.3-8.4,22.8-13.2c-2.4,5.3-4.7,10.3-6.7,15.1c4.3,0.3,8.4,0.7,12.3,1.3c-4.2,5-8.1,9.6-11.5,13.9 c3.1,1.1,6,2.4,8.7,3.8c-1.4,2.9-2.7,5.8-3.9,8.5c2.5,3.5,4.6,7.2,6.3,11c-4.9-0.8-9-0.7-16.2-2.7"/><path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M94.5,103.8 c-0.6,4-3.8,8.9-9.4,14.7c-2.6-1.8-5-3.7-7.2-5.7c-2.5,4.1-6.6,8.8-12.2,14c-1.9-2.2-3.4-4.5-4.5-6.9c-4.4,3.3-9.5,6.9-15.4,10.8 c-0.2-3.4,0.1-7.1,1.1-10.9"/><path fill="#FFFFFF" stroke="#3A5E77" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M97.5,63.9 c-1.7-2.4-5.9-4.1-12.4-5.2c-0.9,2.2-1.8,4.3-2.5,6.5c-3.8-1.8-9.4-3.1-17-3.8c0.5,2.3,1.2,4.5,1.9,6.8c-5-0.6-11.2-0.9-18.4-1 c2,2.9,0.9,3.5,3.9,6.2"/></g><g class="armR" style="visibility: hidden;"><path fill="#fae8e3" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5" d="M265.4 97.3l10.4-38.6-38.9-10.5-20 36.1z"/><path fill="#fae8e3" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5" d="M252.4 52.4L233 47.2c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l10.3 2.8M226 76.4l-19.4-5.2c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l18.3 4.9M228.4 66.7l-23.1-6.2c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l23.1 6.2M235.8 58.3l-26-7c-2.7-.7-5.4.9-6.1 3.5-.7 2.7.9 5.4 3.5 6.1l21.3 5.7"/><path fill="#f9c8bc" d="M207.9 74.7l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8zM206.7 64l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8zM211.2 54.8l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8zM234.6 49.4l-2.2-.6c-1.1-.3-2.2.3-2.4 1.4-.3 1.1.3 2.2 1.4 2.4l2.2.6 1-3.8z"/><path fill="#fff" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M263.3 96.7c41.4 14.9 84.1 30.7 108.2 35.5l14-52.3C352 70 313.6 63.5 273.6 58.1"/><path fill="#fff" stroke="#3a5e77" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M278.2 59.3l-18.6-10 2.5 11.9-10.7 6.5 9.9 8.7-13.9 6.4 9.1 5.9-13.2 9.2 23.1-.9M284.5 100.1c-.4 4 1.8 8.9 6.7 14.8 3.5-1.8 6.7-3.6 9.7-5.5 1.8 4.2 5.1 8.9 10.1 14.1 2.7-2.1 5.1-4.4 7.1-6.8 4.1 3.4 9 7 14.7 11 1.2-3.4 1.8-7 1.7-10.9M314 66.7s5.4-5.7 12.6-7.4c1.7 2.9 3.3 5.7 4.9 8.6 3.8-2.5 9.8-4.4 18.2-5.7.1 3.1.1 6.1 0 9.2 5.5-1 12.5-1.6 20.8-1.9-1.4 3.9-2.5 8.4-2.5 8.4"/></g></g>
+        </svg>
+      </div>
+    </div>
+    <div class="inputGroup inputGroup1">
+      <label for="email" id="loginEmailLabel">Email</label>
+      <input type="email" id="email" name="email"> 
+    </div>
+    <div class="inputGroup inputGroup2">
+      <label for="password" id="loginPasswordLabel">Password</label>
+      <input type="password" id="password" name="pass">
+      <label id="showPasswordToggle" for="showPasswordCheck">Show
+        <input id="showPasswordCheck" type="checkbox"/>
+        <div class="indicator"></div>
+      </label>
+    </div>
+    <div class="inputGroup inputGroup3">
+      <button type="button" onclick="handleRegister()" class="btn">Register</button>
+    </div>
+    <p class="bottom-link">Sudah punya akun? <a href="index.html">Login di sini</a></p>
+    <p id="message"></p>
+  </form>
+</div>
+
+<script src="firebase-config.js" type="module"></script>
+<script src="register.js" type="module"></script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js'></script>
+<script>
+    // Kode dari NextgenmediaSVGPlugin.min_2.js disisipkan di sini
+    (function(){var t=this;t.N2_=t.N2_||{r:[],d:[]},t.N2R=t.N2R||function(){t.N2_.r.push(arguments)},t.N2D=t.N2D||function(){t.N2_.d.push(arguments)}}).call(window),N2D("NextgenmediaSVGPlugin",["GSAP"],function(t,e){var r=this;(r._gsQueue||(r._gsQueue=[])).push(function(){"use strict";var t=Math.PI/180,e=180/Math.PI,n=/[achlmqstvz]|(-?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/gi,o=/(?:(-|-=|\+=)?\d*\.?\d*(?:e[\-+]?\d+)?)[0-9]/gi,i=/(^[#\.]|[a-y][a-z])/gi,a=/[achlmqstvz]/gi,s=/[\+\-]?\d*\.?\d+e[\+\-]?\d+/gi,l=r._gsDefine.globals.TweenLite,h=function(t){r.console&&console.log(t)},u=function(e,r){var n,o,i,a,s,l,h=Math.ceil(Math.abs(r)/90),u=0,c=[];for(e*=t,r*=t,n=r/h,o=4/3*Math.sin(n/2)/(1+Math.cos(n/2)),l=0;h>l;l++)i=e+l*n,a=Math.cos(i),s=Math.sin(i),c[u++]=a-o*s,c[u++]=s+o*a,i+=n,a=Math.cos(i),s=Math.sin(i),c[u++]=a+o*s,c[u++]=s-o*a,c[u++]=a,c[u++]=s;return c},c=function(r,n,o,i,a,s,l,h,c){if(r!==h||n!==c){o=Math.abs(o),i=Math.abs(i);var f=a%360*t,g=Math.cos(f),p=Math.sin(f),d=(r-h)/2,v=(n-c)/2,M=g*d+p*v,b=-p*d+g*v,A=o*o,m=i*i,N=M*M,y=b*b,x=N/A+y/m;x>1&&(o=Math.sqrt(x)*o,i=Math.sqrt(x)*i,A=o*o,m=i*i);var z=s===l?-1:1,P=(A*m-A*y-m*N)/(A*y+m*N);0>P&&(P=0);var S=z*Math.sqrt(P),_=S*(o*b/i),w=S*-(i*M/o),T=(r+h)/2,G=(n+c)/2,I=T+(g*_-p*w),L=G+(p*_+g*w),Y=(M-_)/o,q=(b-w)/i,C=(-M-_)/o,R=(-b-w)/i,B=Math.sqrt(Y*Y+q*q),V=Y;z=0>q?-1:1;var X=z*Math.acos(V/B)*e;B=Math.sqrt((Y*Y+q*q)*(C*C+R*R)),V=Y*C+q*R,z=0>Y*R-q*C?-1:1;var D=z*Math.acos(V/B)*e;!l&&D>0?D-=360:l&&0>D&&(D+=360),D%=360,X%=360;var F,j,H,O=u(X,D),Q=g*o,E=p*o,U=p*-i,W=g*i,Z=O.length-2;for(F=0;Z>F;F+=2)j=O[F],H=O[F+1],O[F]=j*Q+H*U+I,O[F+1]=j*E+H*W+L;return O[O.length-2]=h,O[O.length-1]=c,O}},f=function(t){var e,r,o,i,a,l,u,f,g,p,d,v,M,b=(t+"").replace(s,function(t){var e=+t;return 1e-4>e&&e>-1e-4?0:e}).match(n)||[],A=[],m=0,N=0,y=b.length,x=2,z=0;if(!t||!isNaN(b[0])||isNaN(b[1]))return h("ERROR: malformed path data: "+t),A;for(e=0;y>e;e++)if(M=a,isNaN(b[e])?(a=b[e].toUpperCase(),l=a!==b[e]):e--,o=+b[e+1],i=+b[e+2],l&&(o+=m,i+=N),0===e&&(f=o,g=i),"M"===a)u&&u.length<8&&(A.length-=1,x=0),m=f=o,N=g=i,u=[o,i],z+=x,x=2,A.push(u),e+=2,a="L";else if("C"===a)u||(u=[0,0]),u[x++]=o,u[x++]=i,l||(m=N=0),u[x++]=m+1*b[e+3],u[x++]=N+1*b[e+4],u[x++]=m+=1*b[e+5],u[x++]=N+=1*b[e+6],e+=6;else if("S"===a)"C"===M||"S"===M?(p=m-u[x-4],d=N-u[x-3],u[x++]=m+p,u[x++]=N+d):(u[x++]=m,u[x++]=N),u[x++]=o,u[x++]=i,l||(m=N=0),u[x++]=m+=1*b[e+3],u[x++]=N+=1*b[e+4],e+=4;else if("Q"===a)p=o-m,d=i-N,u[x++]=m+2*p/3,u[x++]=N+2*d/3,l||(m=N=0),m+=1*b[e+3],N+=1*b[e+4],p=o-m,d=i-N,u[x++]=m+2*p/3,u[x++]=N+2*d/3,u[x++]=m,u[x++]=N,e+=4;else if("T"===a)p=m-u[x-4],d=N-u[x-3],u[x++]=m+p,u[x++]=N+d,p=m+1.5*p-o,d=N+1.5*d-i,u[x++]=o+2*p/3,u[x++]=i+2*d/3,u[x++]=m=o,u[x++]=N=i,e+=2;else if("H"===a)i=N,u[x++]=m+(o-m)/3,u[x++]=N+(i-N)/3,u[x++]=m+2*(o-m)/3,u[x++]=N+2*(i-N)/3,u[x++]=m=o,u[x++]=i,e+=1;else if("V"===a)i=o,o=m,l&&(i+=N-m),u[x++]=o,u[x++]=N+(i-N)/3,u[x++]=o,u[x++]=N+2*(i-N)/3,u[x++]=o,u[x++]=N=i,e+=1;else if("L"===a||"Z"===a)"Z"===a&&(o=f,i=g,u.closed=!0),("L"===a||Math.abs(m-o)>.5||Math.abs(N-i)>.5)&&(u[x++]=m+(o-m)/3,u[x++]=N+(i-N)/3,u[x++]=m+2*(o-m)/3,u[x++]=N+2*(i-N)/3,u[x++]=o,u[x++]=i,"L"===a&&(e+=2)),m=o,N=i;else if("A"===a){if(v=c(m,N,1*b[e+1],1*b[e+2],1*b[e+3],1*b[e+4],1*b[e+5],(l?m:0)+1*b[e+6],(l?N:0)+1*b[e+7]))for(r=0;r<v.length;r++)u[x++]=v[r];m=u[x-2],N=u[x-1],e+=7}else h("Error: malformed path data: "+t);return A.totalPoints=z+x,A},g=function(t,e){var r,n,o,i,a,s,l,h,u,c,f,g,p,d,v=0,M=.999999,b=t.length,A=e/((b-2)/6);for(p=2;b>p;p+=6)for(v+=A;v>M;)r=t[p-2],n=t[p-1],o=t[p],i=t[p+1],a=t[p+2],s=t[p+3],l=t[p+4],h=t[p+5],d=1/(Math.floor(v)+1),u=r+(o-r)*d,f=o+(a-o)*d,u+=(f-u)*d,f+=(a+(l-a)*d-f)*d,c=n+(i-n)*d,g=i+(s-i)*d,c+=(g-c)*d,g+=(s+(h-s)*d-g)*d,t.splice(p,4,r+(o-r)*d,n+(i-n)*d,u,c,u+(f-u)*d,c+(g-c)*d,f,g,a+(l-a)*d,s+(h-s)*d),p+=6,b+=6,v--;return t},p=function(t){var e,r,n,o,i="",a=t.length,s=100;for(r=0;a>r;r++){for(o=t[r],i+="M"+o[0]+","+o[1]+" C",e=o.length,n=2;e>n;n++)i+=(o[n++]*s|0)/s+","+(o[n++]*s|0)/s+" "+(o[n++]*s|0)/s+","+(o[n++]*s|0)/s+" "+(o[n++]*s|0)/s+","+(o[n]*s|0)/s+" ";o.closed&&(i+="z")}return i},d=function(t){for(var e=[],r=t.length-1,n=0;--r>-1;)e[n++]=t[r],e[n++]=t[r+1],r--;for(r=0;n>r;r++)t[r]=e[r];t.reversed=!t.reversed},v=function(t){var e,r=t.length,n=0,o=0;for(e=0;r>e;e++)n+=t[e++],o+=t[e];return[n/(r/2),o/(r/2)]},M=function(t){var e,r,n,o=t.length,i=t[0],a=i,s=t[1],l=s;for(n=6;o>n;n+=6)e=t[n],r=t[n+1],e>i?i=e:a>e&&(a=e),r>s?s=r:l>r&&(l=r);return t.centerX=(i+a)/2,t.centerY=(s+l)/2,t.size=(i-a)*(s-l)},b=function(t){for(var e,r,n,o,i,a=t.length,s=t[0][0],l=s,h=t[0][1],u=h;--a>-1;)for(i=t[a],e=i.length,o=6;e>o;o+=6)r=i[o],n=i[o+1],r>s?s=r:l>r&&(l=r),n>h?h=n:u>n&&(u=n);return t.centerX=(s+l)/2,t.centerY=(h+u)/2,t.size=(s-l)*(h-u)},A=function(t,e){return e.length-t.length},m=function(t,e){var r=t.size||M(t),n=e.size||M(e);return Math.abs(n-r)<(r+n)/20?e.centerX-t.centerX||e.centerY-t.centerY:n-r},N=function(t,e){var r,n,o=t.slice(0),i=t.length,a=i-2;for(e=0|e,r=0;i>r;r++)n=(r+e)%a,t[r++]=o[n],t[r]=o[n+1]},y=function(t,e,r,n,o){var i,a,s,l,h=t.length,u=0,c=h-2;for(r*=6,a=0;h>a;a+=6)i=(a+r)%c,l=t[i]-(e[a]-n),s=t[i+1]-(e[a+1]-o),u+=Math.sqrt(s*s+l*l);return u},x=function(t,e,r){var n,o,i,a=t.length,s=v(t),l=v(e),h=l[0]-s[0],u=l[1]-s[1],c=y(t,e,0,h,u),f=0;for(i=6;a>i;i+=6)o=y(t,e,i/6,h,u),c>o&&(c=o,f=i);if(r)for(n=t.slice(0),d(n),i=6;a>i;i+=6)o=y(n,e,i/6,h,u),c>o&&(c=o,f=-i);return f/6},z=function(t,e,r){for(var n,o,i,a,s,l,h=t.length,u=99999999999,c=0,f=0;--h>-1;)for(n=t[h],l=n.length,s=0;l>s;s+=6)o=n[s]-e,i=n[s+1]-r,a=Math.sqrt(o*o+i*i),u>a&&(u=a,c=n[s],f=n[s+1]);return[c,f]},P=function(t,e,r,n,o,i){var a,s,l,h,u,c=e.length,f=0,g=Math.min(t.size||M(t),e[r].size||M(e[r]))*n,p=999999999999,d=t.centerX+o,v=t.centerY+i;for(s=r;c>s&&(a=e[s].size||M(e[s]),!(g>a));s++)l=e[s].centerX-d,h=e[s].centerY-v,u=Math.sqrt(l*l+h*h),p>u&&(f=s,p=u);return u=e[f],e.splice(f,1),u},S=function(t,e,r,n){var o,i,a,s,l,u,c,f=e.length-t.length,p=f>0?e:t,v=f>0?t:e,y=0,S="complexity"===n?A:m,_="position"===n?0:"number"==typeof n?n:.8,w=v.length,T="object"==typeof r&&r.push?r.slice(0):[r],G="reverse"===T[0]||T[0]<0,I="log"===r;if(v[0]){if(p.length>1&&(t.sort(S),e.sort(S),u=p.size||b(p),u=v.size||b(v),u=p.centerX-v.centerX,c=p.centerY-v.centerY,S===m))for(w=0;w<v.length;w++)p.splice(w,0,P(v[w],p,w,_,u,c));if(f)for(0>f&&(f=-f),p[0].length>v[0].length&&g(v[0],(p[0].length-v[0].length)/6|0),w=v.length;f>y;)s=p[w].size||M(p[w]),a=z(v,p[w].centerX,p[w].centerY),s=a[0],l=a[1],v[w++]=[s,l,s,l,s,l,s,l],v.totalPoints+=8,y++;for(w=0;w<t.length;w++)o=e[w],i=t[w],f=o.length-i.length,0>f?g(o,-f/6|0):f>0&&g(i,f/6|0),G&&!i.reversed&&d(i),r=T[w]||0===T[w]?T[w]:"auto",r&&(i.closed||Math.abs(i[0]-i[i.length-2])<.5&&Math.abs(i[1]-i[i.length-1])<.5?"auto"===r||"log"===r?(T[w]=r=x(i,o,0===w),0>r&&(G=!0,d(i),r=-r),N(i,6*r)):"reverse"!==r&&(w&&0>r&&d(i),N(i,6*(0>r?-r:r))):!G&&("auto"===r&&Math.abs(o[0]-i[0])+Math.abs(o[1]-i[1])+Math.abs(o[o.length-2]-i[i.length-2])+Math.abs(o[o.length-1]-i[i.length-1])>Math.abs(o[0]-i[i.length-2])+Math.abs(o[1]-i[i.length-1])+Math.abs(o[o.length-2]-i[0])+Math.abs(o[o.length-1]-i[1])||r%2)?(d(i),T[w]=-1,G=!0):"auto"===r?T[w]=0:"reverse"===r&&(T[w]=-1),i.closed!==o.closed&&(i.closed=o.closed=!1));return I&&h("shapeIndex:["+T.join(",")+"]"),T}},_=function(t,e,r,n){var o=f(t[0]),i=f(t[1]);S(o,i,e||0===e?e:"auto",r)&&(t[0]=p(o),t[1]=p(i),("log"===n||n===!0)&&h('precompile:["'+t[0]+'","'+t[1]+'"]'))},w=function(t,e,r){return e||r||t||0===t?function(n){_(n,t,e,r)}:_},T=function(t,e){if(!e)return t;var r,n,i,a=t.match(o)||[],s=a.length,l="";for("reverse"===e?(n=s-1,r=-2):(n=(2*(parseInt(e,10)||0)+1+100*s)%s,r=2),i=0;s>i;i+=2)l+=a[n-1]+","+a[n]+" ",n=(n+r)%s;return l},G=function(t,e){var r,n,o,i,a,s,l,h=0,u=parseFloat(t[0]),c=parseFloat(t[1]),f=u+","+c+" ",g=.999999;for(o=t.length,r=.5*e/(.5*o-1),n=0;o-2>n;n+=2){if(h+=r,s=parseFloat(t[n+2]),l=parseFloat(t[n+3]),h>g)for(a=1/(Math.floor(h)+1),i=1;h>g;)f+=(u+(s-u)*a*i).toFixed(2)+","+(c+(l-c)*a*i).toFixed(2)+" ",h--,i++;f+=s+","+l+" ",u=s,c=l}return f},I=function(t){var e=t[0].match(o)||[],r=t[1].match(o)||[],n=r.length-e.length;n>0?t[0]=G(e,n):t[1]=G(r,-n)},L=function(t){return isNaN(t)?I:function(e){I(e),e[1]=T(e[1],parseInt(t,10))}},Y=function(t,e){var n,o=r.document.createElementNS("http://www.w3.org/2000/svg","path"),i=Array.prototype.slice.call(t.attributes),a=i.length;for(e=","+e+",";--a>-1;)n=i[a].nodeName.toLowerCase(),-1===e.indexOf(","+n+",")&&o.setAttributeNS(null,n,i[a].nodeValue);return o},q=function(t,e){var r,n,i,a,s,l,h,u,c,f,g,p,d,v,M,b,A,m,N,y,x,z=t.tagName.toLowerCase(),P=.552284749831;return"path"!==z&&t.getBBox?(l=Y(t,"x,y,width,height,cx,cy,rx,ry,r,x1,x2,y1,y2,points"),"rect"===z?(a=+t.getAttribute("rx")||0,s=+t.getAttribute("ry")||0,n=+t.getAttribute("x")||0,i=+t.getAttribute("y")||0,f=(+t.getAttribute("width")||0)-2*a,g=(+t.getAttribute("height")||0)-2*s,a||s?(p=n+a*(1-P),d=n+a,v=d+f,M=v+a*P,b=v+a,A=i+s*(1-P),m=i+s,N=m+g,y=N+s*P,x=N+s,r="M"+b+","+m+" V"+N+" C"+[b,y,M,x,v,x,v-(v-d)/3,x,d+(v-d)/3,x,d,x,p,x,n,y,n,N,n,N-(N-m)/3,n,m+(N-m)/3,n,m,n,A,p,i,d,i,d+(v-d)/3,i,v-(v-d)/3,i,v,i,M,i,b,A,b,m].join(",")+"z"):r="M"+(n+f)+","+i+" v"+g+" h"+-f+" v"+-g+" h"+f+"z"):"circle"===z||"ellipse"===z?("circle"===z?(a=s=+t.getAttribute("r")||0,u=a*P):(a=+t.getAttribute("rx")||0,s=+t.getAttribute("ry")||0,u=s*P),n=+t.getAttribute("cx")||0,i=+t.getAttribute("cy")||0,h=a*P,r="M"+(n+a)+","+i+" C"+[n+a,i+u,n+h,i+s,n,i+s,n-h,i+s,n-a,i+u,n-a,i,n-a,i-u,n-h,i-s,n,i-s,n+h,i-s,n+a,i-u,n+a,i].join(",")+"z"):"line"===z?r="M"+(t.getAttribute("x1")||0)+","+(t.getAttribute("y1")||0)+" L"+(t.getAttribute("x2")||0)+","+(t.getAttribute("y2")||0):("polyline"===z||"polygon"===z)&&(c=(t.getAttribute("points")+"").match(o)||[],n=c.shift(),i=c.shift(),r="M"+n+","+i+" L"+c.join(","),"polygon"===z&&(r+=","+n+","+i+"z")),l.setAttribute("d",r),e&&t.parentNode&&(t.parentNode.insertBefore(l,t),t.parentNode.removeChild(t)),l):t},C=function(t,e,r){var n,a,s="string"==typeof t;return(!s||i.test(t)||(t.match(o)||[]).length<3)&&(n=s?l.selector(t):t&&t[0]?t:[t],n&&n[0]?(n=n[0],a=n.nodeName.toUpperCase(),e&&"PATH"!==a&&(n=q(n,!1),a="PATH"),t=n.getAttribute("PATH"===a?"d":"points")||"",n===r&&(t=n.getAttributeNS(null,"data-original")||t)):(h("WARNING: invalid morph to: "+t),t=!1)),t},R="Use NextgenmediaSVGPlugin.convertToPath(elementOrSelectorText) to convert to a path before morphing.",B=r._gsDefine.plugin({propName:"morphSVG",API:2,global:!0,version:"0.8.11",init:function(t,e,r,n){var o,i,s,l,u;return"function"!=typeof t.setAttribute?!1:("function"==typeof e&&(e=e(n,t)),o=t.nodeName.toUpperCase(),u="POLYLINE"===o||"POLYGON"===o,"PATH"===o||u?(i="PATH"===o?"d":"points",("string"==typeof e||e.getBBox||e[0])&&(e={shape:e}),l=C(e.shape||e.d||e.points||"","d"===i,t),u&&a.test(l)?(h("WARNING: a <"+o+"> cannot accept path data. "+R),!1):(l&&(this._target=t,t.getAttributeNS(null,"data-original")||t.setAttributeNS(null,"data-original",t.getAttribute(i)),s=this._addTween(t,"setAttribute",t.getAttribute(i)+"",l+"","morphSVG",!1,i,"object"==typeof e.precompile?function(t){t[0]=e.precompile[0],t[1]=e.precompile[1]}:"d"===i?w(e.shapeIndex,e.map||B.defaultMap,e.precompile):L(e.shapeIndex)),s&&(this._overwriteProps.push("morphSVG"),s.end=l,s.endProp=i)),!0)):(h("WARNING: cannot morph a <"+o+"> SVG element. "+R),!1))},set:function(t){var e;if(this._super.setRatio.call(this,t),1===t)for(e=this._firstPT;e;)e.end&&this._target.setAttribute(e.endProp,e.end),e=e._next}});B.pathFilter=_,B.pointsFilter=I,B.subdivideRawBezier=g,B.defaultMap="size",B.pathDataToRawBezier=function(t){return f(C(t,!0))},B.equalizeSegmentQuantity=S,B.convertToPath=function(t,e){"string"==typeof t&&(t=l.selector(t));for(var r=t&&0!==t.length?t.length&&t[0]&&t[0].nodeType?Array.prototype.slice.call(t,0):[t]:[],n=r.length;--n>-1;)r[n]=q(r[n],e!==!1);return r},B.pathDataToBezier=function(t,e){var r,n,o,i,a,s,h,u,c=f(C(t,!0))[0]||[],g=0;if(e=e||{},u=e.align||e.relative,i=e.matrix||[1,0,0,1,0,0],a=e.offsetX||0,s=e.offsetY||0,"relative"===u||u===!0?(a-=c[0]*i[0]+c[1]*i[2],s-=c[0]*i[1]+c[1]*i[3],g="+="):(a+=i[4],s+=i[5],u&&(u="string"==typeof u?l.selector(u):u&&u[0]?u:[u],u&&u[0]&&(h=u[0].getBBox()||{x:0,y:0},a-=h.x,s-=h.y))),r=[],o=c.length,i&&"1,0,0,1,0,0"!==i.join(","))for(n=0;o>n;n+=2)r.push({x:g+(c[n]*i[0]+c[n+1]*i[2]+a),y:g+(c[n]*i[1]+c[n+1]*i[3]+s)});else for(n=0;o>n;n+=2)r.push({x:g+(c[n]+a),y:g+(c[n+1]+s)});return r}}),r._gsDefine&&r._gsQueue.pop()()}),N2D("NextgenmediaSVGPlugin");
+</script>
+<script>
+    // Kode dari script.js lama Anda, sudah disesuaikan
+    var emailLabel = document.querySelector('#loginEmailLabel'),
+        // Diubah: Gunakan id="email" yang baru
+        email = document.querySelector('#email'),
+        passwordLabel = document.querySelector('#loginPasswordLabel'),
+        // Diubah: Gunakan id="password" yang baru
+        password = document.querySelector('#password'),
+        showPasswordCheck = document.querySelector('#showPasswordCheck'),
+        showPasswordToggle = document.querySelector('#showPasswordToggle'),
+        mySVG = document.querySelector('.mySVG'),
+        twoFingers = document.querySelector('.twoFingers'),
+        armL = document.querySelector('.armL'),
+        armR = document.querySelector('.armR'),
+        eyeL = document.querySelector('.eyeL'),
+        eyeR = document.querySelector('.eyeR'),
+        nose = document.querySelector('.nose'),
+        mouth = document.querySelector('.mouth'),
+        mouthBG = document.querySelector('.mouthBG'),
+        mouthSmallBG = document.querySelector('.mouthSmallBG'),
+        mouthMediumBG = document.querySelector('.mouthMediumBG'),
+        mouthLargeBG = document.querySelector('.mouthLargeBG'),
+        mouthMaskPath = document.querySelector('#mouthMaskPath'),
+        mouthOutline = document.querySelector('.mouthOutline'),
+        tooth = document.querySelector('.tooth'),
+        tongue = document.querySelector('.tongue'),
+        chin = document.querySelector('.chin'),
+        face = document.querySelector('.face'),
+        eyebrow = document.querySelector('.eyebrow'),
+        outerEarL = document.querySelector('.earL .outerEar'),
+        outerEarR = document.querySelector('.earR .outerEar'),
+        earHairL = document.querySelector('.earL .earHair'),
+        earHairR = document.querySelector('.earR .earHair'),
+        hair = document.querySelector('.hair'),
+        bodyBG = document.querySelector('.bodyBGnormal'),
+        bodyBGchanged = document.querySelector('.bodyBGchanged');
+    var activeElement, curEmailIndex, screenCenter, svgCoords, emailCoords, emailScrollMax, chinMin = .5, dFromC, mouthStatus = "small", blinking, eyeScale = 1, eyesCovered = false, showPasswordClicked = false;
+    var eyeLCoords, eyeRCoords, noseCoords, mouthCoords, eyeLAngle, eyeLX, eyeLY, eyeRAngle, eyeRX, eyeRY, noseAngle, noseX, noseY, mouthAngle, mouthX, mouthY, mouthR, chinX, chinY, chinS, faceX, faceY, faceSkew, eyebrowSkew, outerEarX, outerEarY, hairX, hairS;
+
+    // SEMUA FUNGSI DARI SCRIPT.JS LAMA ANDA DITEMPEL DI SINI
+    function calculateFaceMove(e) {
+        var 	
+            carPos = email.selectionEnd,
+            div = document.createElement('div'),
+            span = document.createElement('span'),
+            copyStyle = getComputedStyle(email),
+            caretCoords = {}
+        ;
+        if(carPos == null || carPos == 0) {
+            carPos = email.value.length;
+        }
+        [].forEach.call(copyStyle, function(prop){
+            div.style[prop] = copyStyle[prop];
+        });
+        div.style.position = 'absolute';
+        document.body.appendChild(div);
+        div.textContent = email.value.substr(0, carPos);
+        span.textContent = email.value.substr(carPos) || '.';
+        div.appendChild(span);
+        
+        if(email.scrollWidth <= emailScrollMax) {
+            caretCoords = getPosition(span);
+            dFromC = screenCenter - (caretCoords.x + emailCoords.x);
+            eyeLAngle = getAngle(eyeLCoords.x, eyeLCoords.y, emailCoords.x + caretCoords.x, emailCoords.y + 25);
+            eyeRAngle = getAngle(eyeRCoords.x, eyeRCoords.y, emailCoords.x + caretCoords.x, emailCoords.y + 25);
+            noseAngle = getAngle(noseCoords.x, noseCoords.y, emailCoords.x + caretCoords.x, emailCoords.y + 25);
+            mouthAngle = getAngle(mouthCoords.x, mouthCoords.y, emailCoords.x + caretCoords.x, emailCoords.y + 25);
+        } else {
+            eyeLAngle = getAngle(eyeLCoords.x, eyeLCoords.y, emailCoords.x + emailScrollMax, emailCoords.y + 25);
+            eyeRAngle = getAngle(eyeRCoords.x, eyeRCoords.y, emailCoords.x + emailScrollMax, emailCoords.y + 25);
+            noseAngle = getAngle(noseCoords.x, noseCoords.y, emailCoords.x + emailScrollMax, emailCoords.y + 25);
+            mouthAngle = getAngle(mouthCoords.x, mouthCoords.y, emailCoords.x + emailScrollMax, emailCoords.y + 25);
+        }
+        
+        eyeLX = Math.cos(eyeLAngle) * 20;
+        eyeLY = Math.sin(eyeLAngle) * 10;
+        eyeRX = Math.cos(eyeRAngle) * 20;
+        eyeRY = Math.sin(eyeRAngle) * 10;
+        noseX = Math.cos(noseAngle) * 23;
+        noseY = Math.sin(noseAngle) * 10;
+        mouthX = Math.cos(mouthAngle) * 23;
+        mouthY = Math.sin(mouthAngle) * 10;
+        mouthR = Math.cos(mouthAngle) * 6;
+        chinX = mouthX * .8;
+        chinY = mouthY * .5;
+        chinS = 1 - ((dFromC * .15) / 100);
+        if(chinS > 1) {
+            chinS = 1 - (chinS - 1);
+            if(chinS < chinMin) {
+                chinS = chinMin;	
+            }
+        }
+        faceX = mouthX * .3;
+        faceY = mouthY * .4;
+        faceSkew = Math.cos(mouthAngle) * 5;
+        eyebrowSkew = Math.cos(mouthAngle) * 25;
+        outerEarX = Math.cos(mouthAngle) * 4;
+        outerEarY = Math.cos(mouthAngle) * 5;
+        hairX = Math.cos(mouthAngle) * 6;
+        hairS = 1.2;	
+        
+        TweenMax.to(eyeL, 1, {x: -eyeLX , y: -eyeLY, ease: Expo.easeOut});
+        TweenMax.to(eyeR, 1, {x: -eyeRX , y: -eyeRY, ease: Expo.easeOut});
+        TweenMax.to(nose, 1, {x: -noseX, y: -noseY, rotation: mouthR, transformOrigin: "center center", ease: Expo.easeOut});
+        TweenMax.to(mouth, 1, {x: -mouthX , y: -mouthY, rotation: mouthR, transformOrigin: "center center", ease: Expo.easeOut});
+        TweenMax.to(chin, 1, {x: -chinX, y: -chinY, scaleY: chinS, ease: Expo.easeOut});
+        TweenMax.to(face, 1, {x: -faceX, y: -faceY, skewX: -faceSkew, transformOrigin: "center top", ease: Expo.easeOut});
+        TweenMax.to(eyebrow, 1, {x: -faceX, y: -faceY, skewX: -eyebrowSkew, transformOrigin: "center top", ease: Expo.easeOut});
+        TweenMax.to(outerEarL, 1, {x: outerEarX, y: -outerEarY, ease: Expo.easeOut});
+        TweenMax.to(outerEarR, 1, {x: outerEarX, y: outerEarY, ease: Expo.easeOut});
+        TweenMax.to(earHairL, 1, {x: -outerEarX, y: -outerEarY, ease: Expo.easeOut});
+        TweenMax.to(earHairR, 1, {x: -outerEarX, y: outerEarY, ease: Expo.easeOut});
+        TweenMax.to(hair, 1, {x: hairX, scaleY: hairS, transformOrigin: "center bottom", ease: Expo.easeOut});	
+            
+        document.body.removeChild(div);
+    };
+
+    function onEmailInput(e) {
+        calculateFaceMove(e);
+        var value = email.value;
+        curEmailIndex = value.length;
+        
+        if(curEmailIndex > 0) {
+            if(mouthStatus == "small") {
+                mouthStatus = "medium";
+                TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, shapeIndex: 8, ease: Expo.easeOut});
+                TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
+                TweenMax.to(tongue, 1, {x: 0, y: 1, ease: Expo.easeOut});
+                TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
+                eyeScale = .85;
+            }
+            if(value.includes("@")) {
+                mouthStatus = "large";
+                TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthLargeBG, ease: Expo.easeOut});
+                TweenMax.to(tooth, 1, {x: 3, y: -2, ease: Expo.easeOut});
+                TweenMax.to(tongue, 1, {y: 2, ease: Expo.easeOut});
+                TweenMax.to([eyeL, eyeR], 1, {scaleX: .65, scaleY: .65, ease: Expo.easeOut, transformOrigin: "center center"});
+                eyeScale = .65;
+            } else {
+                mouthStatus = "medium";
+                TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthMediumBG, ease: Expo.easeOut});
+                TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
+                TweenMax.to(tongue, 1, {x: 0, y: 1, ease: Expo.easeOut});
+                TweenMax.to([eyeL, eyeR], 1, {scaleX: .85, scaleY: .85, ease: Expo.easeOut});
+                eyeScale = .85;
+            }
+        } else {
+            mouthStatus = "small";
+            TweenMax.to([mouthBG, mouthOutline, mouthMaskPath], 1, {morphSVG: mouthSmallBG, shapeIndex: 9, ease: Expo.easeOut});
+            TweenMax.to(tooth, 1, {x: 0, y: 0, ease: Expo.easeOut});
+            TweenMax.to(tongue, 1, {y: 0, ease: Expo.easeOut});
+            TweenMax.to([eyeL, eyeR], 1, {scaleX: 1, scaleY: 1, ease: Expo.easeOut});
+            eyeScale = 1;
+        }
+    }
+
+    function onEmailFocus(e) {
+        activeElement = "email";
+        e.target.parentElement.classList.add("focusWithText");
+        onEmailInput();
+    }
+
+    function onEmailBlur(e) {
+        activeElement = null;
+        setTimeout(function() {
+            if(activeElement == "email") {} else {
+                if(e.target.value == "") {
+                    e.target.parentElement.classList.remove("focusWithText");
+                }
+                resetFace();
+            }
+        }, 100);
+    }
+
+    function onEmailLabelClick(e) { activeElement = "email"; }
+    function onPasswordFocus(e) { activeElement = "password"; if(!eyesCovered) { coverEyes(); } }
+    function onPasswordBlur(e) { activeElement = null; setTimeout(function() { if(activeElement != "toggle" && activeElement != "password") { uncoverEyes(); } }, 100); }
+    function onPasswordToggleFocus(e) { activeElement = "toggle"; if(!eyesCovered) { coverEyes(); } }
+    function onPasswordToggleBlur(e) { activeElement = null; if(!showPasswordClicked) { setTimeout(function() { if(activeElement != "password" && activeElement != "toggle") { uncoverEyes(); } }, 100); } }
+    function onPasswordToggleMouseDown(e) { showPasswordClicked = true; }
+    function onPasswordToggleMouseUp(e) { showPasswordClicked = false; }
+    function onPasswordToggleChange(e) { setTimeout(function() { if(e.target.checked) { password.type = "text"; spreadFingers(); } else { password.type = "password"; closeFingers(); }	}, 100); }
+    function onPasswordToggleClick(e) { e.target.focus(); }
+    function spreadFingers() { TweenMax.to(twoFingers, .35, {transformOrigin: "bottom left", rotation: 30, x: -9, y: -2, ease: Power2.easeInOut}); }
+    function closeFingers() { TweenMax.to(twoFingers, .35, {transformOrigin: "bottom left", rotation: 0, x: 0, y: 0, ease: Power2.easeInOut}); }
+    function coverEyes() { TweenMax.killTweensOf([armL, armR]); TweenMax.set([armL, armR], {visibility: "visible"}); TweenMax.to(armL, .45, {x: -93, y: 10, rotation: 0, ease: Quad.easeOut}); TweenMax.to(armR, .45, {x: -93, y: 10, rotation: 0, ease: Quad.easeOut, delay: .1}); TweenMax.to(bodyBG, .45, {morphSVG: bodyBGchanged, ease: Quad.easeOut}); eyesCovered = true; }
+    function uncoverEyes() { TweenMax.killTweensOf([armL, armR]); TweenMax.to(armL, 1.35, {y: 220, ease: Quad.easeOut}); TweenMax.to(armL, 1.35, {rotation: 105, ease: Quad.easeOut, delay: .1}); TweenMax.to(armR, 1.35, {y: 220, ease: Quad.easeOut}); TweenMax.to(armR, 1.35, {rotation: -105, ease: Quad.easeOut, delay: .1, onComplete: function() { TweenMax.set([armL, armR], {visibility: "hidden"}); }}); TweenMax.to(bodyBG, .45, {morphSVG: bodyBG, ease: Quad.easeOut}); eyesCovered = false; }
+    function resetFace() { TweenMax.to([eyeL, eyeR], 1, {x: 0, y: 0, ease: Expo.easeOut}); TweenMax.to(nose, 1, {x: 0, y: 0, scaleX: 1, scaleY: 1, ease: Expo.easeOut}); TweenMax.to(mouth, 1, {x: 0, y: 0, rotation: 0, ease: Expo.easeOut}); TweenMax.to(chin, 1, {x: 0, y: 0, scaleY: 1, ease: Expo.easeOut}); TweenMax.to([face, eyebrow], 1, {x: 0, y: 0, skewX: 0, ease: Expo.easeOut}); TweenMax.to([outerEarL, outerEarR, earHairL, earHairR, hair], 1, {x: 0, y: 0, scaleY: 1, ease: Expo.easeOut}); }
+    function startBlinking(delay) { if(delay) { delay = getRandomInt(delay); } else { delay = 1; } blinking = TweenMax.to([eyeL, eyeR], .1, {delay: delay, scaleY: 0, yoyo: true, repeat: 1, transformOrigin: "center center", onComplete: function() { startBlinking(12); }}); }
+    function stopBlinking() { blinking.kill(); blinking = null; TweenMax.set([eyeL, eyeR], {scaleY: eyeScale}); }
+    function getRandomInt(max) { return Math.floor(Math.random() * Math.floor(max)); }
+    function getAngle(x1, y1, x2, y2) { return Math.atan2(y1 - y2, x1 - x2); }
+    function getPosition(el) {
+        var xPos = 0, yPos = 0;
+        while (el) {
+            if (el.tagName == "BODY") { var xScroll = el.scrollLeft || document.documentElement.scrollLeft; var yScroll = el.scrollTop || document.documentElement.scrollTop; xPos += (el.offsetLeft - xScroll + el.clientLeft); yPos += (el.offsetTop - yScroll + el.clientTop); }
+            else { xPos += (el.offsetLeft - el.scrollLeft + el.clientLeft); yPos += (el.offsetTop - el.scrollTop + el.clientTop); }
+            el = el.offsetParent;
+        }
+        return { x: xPos, y: yPos };
+    }
+    function isMobileDevice() { var check = false; (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera); return check; };
+
+    function initLoginForm() {
+        if (!mySVG || !email) return; // Tambahan: pengaman jika elemen tidak ada
+        svgCoords = getPosition(mySVG);
+        emailCoords = getPosition(email);
+        screenCenter = svgCoords.x + (mySVG.offsetWidth / 2);
+        eyeLCoords = {x: svgCoords.x + 84, y: svgCoords.y + 76};
+        eyeRCoords = {x: svgCoords.x + 113, y: svgCoords.y + 76};
+        noseCoords = {x: svgCoords.x + 97, y: svgCoords.y + 81};
+        mouthCoords = {x: svgCoords.x + 100, y: svgCoords.y + 100};
+        
+        email.addEventListener('focus', onEmailFocus);
+        email.addEventListener('blur', onEmailBlur);
+        email.addEventListener('input', onEmailInput);
+        if(emailLabel) emailLabel.addEventListener('click', onEmailLabelClick);
+        
+        password.addEventListener('focus', onPasswordFocus);
+        password.addEventListener('blur', onPasswordBlur);
+        
+        showPasswordCheck.addEventListener('change', onPasswordToggleChange);
+        showPasswordCheck.addEventListener('focus', onPasswordToggleFocus);
+        showPasswordCheck.addEventListener('blur', onPasswordToggleBlur);
+        showPasswordCheck.addEventListener('click', onPasswordToggleClick);
+        showPasswordToggle.addEventListener('mouseup', onPasswordToggleMouseUp);
+        showPasswordToggle.addEventListener('mousedown', onPasswordToggleMouseDown);
+        
+        TweenMax.set(armL, {x: -93, y: 220, rotation: 105, transformOrigin: "top left"});
+        TweenMax.set(armR, {x: -93, y: 220, rotation: -105, transformOrigin: "top right"});
+        
+        TweenMax.set(mouth, {transformOrigin: "center center"});
+        
+        startBlinking(5);
+        
+        emailScrollMax = email.scrollWidth;
+        
+        if(isMobileDevice()) {
+            password.type = "text";
+            showPasswordCheck.checked = true;
+            TweenMax.set(twoFingers, {transformOrigin: "bottom left", rotation: 30, x: -9, y: -2, ease: Power2.easeInOut});
+        }
+    }
+    window.onload = initLoginForm;
+</script>
+
+</body>
+</html>

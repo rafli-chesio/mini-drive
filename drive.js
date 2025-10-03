@@ -69,7 +69,7 @@ async function renderCurrentPath() {
         for (const folderRef of res.prefixes) {
             items.push({ name: folderRef.name, fullPath: folderRef.fullPath, isFolder: true, updated: new Date().toISOString() });
         }
-        if (currentPath !== '') { // Hanya tampilkan file jika di dalam folder
+        if (currentPath !== '') {
             for (const itemRef of res.items) {
                 if (itemRef.name === '.keep') continue;
                 const metadata = await getMetadata(itemRef);
@@ -82,7 +82,7 @@ async function renderCurrentPath() {
         } else {
             placeholder.style.display = 'none';
         }
-
+        
         if (currentPath !== '') {
             const tr = document.createElement('tr');
             tr.style.cursor = 'pointer';
@@ -93,31 +93,36 @@ async function renderCurrentPath() {
 
         for (const item of items) {
             const tr = document.createElement('tr');
-            let downloadButtonHTML = '';
-            if (!item.isFolder) {
-                const url = await getDownloadURL(ref(storage, item.fullPath));
-                downloadButtonHTML = `<a href="${url}" target="_blank" class="action-btn" title="Unduh"><i class="fas fa-download"></i></a>`;
-            }
-
-            tr.innerHTML = `
-                <td class="file-name-cell"><i class="file-icon ${item.isFolder ? 'fas fa-folder' : getFileIcon(item.name)}"></i> ${item.name}</td>
-                <td>${new Date(item.updated).toLocaleDateString('id-ID')}</td>
-                <td>${item.isFolder ? '—' : formatBytes(item.size)}</td>
-                <td class="action-buttons">
-                    ${downloadButtonHTML}
-                    <button title="Hapus" class="delete-btn action-btn"><i class="fas fa-trash"></i></button>
-                </td>
-            `;
             
+            // --- PERUBAHAN UTAMA ADA DI SINI ---
+            let nameCellHTML = '';
             if (item.isFolder) {
+                // Jika folder, buat agar bisa diklik untuk masuk ke folder
                 tr.style.cursor = 'pointer';
+                nameCellHTML = `<i class="file-icon fas fa-folder"></i> ${item.name}`;
                 tr.onclick = (e) => {
                     if (!e.target.closest('.action-btn')) {
                         currentPath = item.name;
                         renderCurrentPath();
                     }
                 };
+            } else {
+                // Jika file, dapatkan URL dan buat nama file menjadi link
+                const url = await getDownloadURL(ref(storage, item.fullPath));
+                nameCellHTML = `<a href="${url}" target="_blank">
+                                  <i class="file-icon ${getFileIcon(item.name)}"></i>
+                                  ${item.name}
+                                </a>`;
             }
+
+            tr.innerHTML = `
+                <td class="file-name-cell">${nameCellHTML}</td>
+                <td>${new Date(item.updated).toLocaleDateString('id-ID')}</td>
+                <td>${item.isFolder ? '—' : formatBytes(item.size)}</td>
+                <td class="action-buttons">
+                    <button title="Hapus" class="delete-btn action-btn"><i class="fas fa-trash"></i></button>
+                </td>
+            `;
             
             tr.querySelector('.delete-btn').onclick = (e) => {
                 e.stopPropagation();
